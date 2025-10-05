@@ -1,0 +1,5 @@
+USA = "countries/USA - United Colonies.txt"
+GBR = "countries/GBR - British Empire.txt"
+FRA = "countries/FRA - Kingdom of France.txt"
+ESP = "countries/ESP - Spanish Empire.txt"
+NEU = "countries/NEU - Neutral Powers.txt"

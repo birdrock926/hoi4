@@ -1,0 +1,12 @@
+division_names = {
+    USA = {
+        infantry = {
+            "1st Continental Division"
+            "2nd Continental Division"
+            "3rd Continental Division"
+        }
+        militia = {
+            "$NUMBER$th Militia Regiment"
+        }
+    }
+}

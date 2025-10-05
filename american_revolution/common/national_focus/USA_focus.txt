@@ -1,0 +1,374 @@
+focus_tree = {
+    id = USA_focus
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = USA
+        }
+    }
+
+    default = no
+
+    focus = {
+        id = USA_continental_congress
+        icon = GFX_goal_political_pressure
+        x = 0
+        y = 0
+        cost = 7
+        completion_reward = {
+            add_political_power = 120
+            add_stability = 0.05
+            add_ideas = USA_congress_in_session
+        }
+    }
+
+    focus = {
+        id = USA_call_for_militia
+        icon = GFX_goal_generic_military_sphere
+        prerequisite = { focus = USA_continental_congress }
+        x = -3
+        y = 1
+        cost = 7
+        completion_reward = {
+            add_manpower = 15000
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_0
+                amount = 2000
+                producer = USA
+            }
+            country_event = { id = american_revolution.2 days = 1 }
+        }
+    }
+
+    focus = {
+        id = USA_raise_continental_army
+        icon = GFX_goal_support_the_left
+        prerequisite = { focus = USA_continental_congress }
+        x = -1
+        y = 1
+        cost = 7
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                category = professional_army
+            }
+            add_ideas = USA_continental_army
+            add_army_experience = 25
+        }
+    }
+
+    focus = {
+        id = USA_finance_committee
+        icon = GFX_goal_generic_finance_reform
+        prerequisite = { focus = USA_continental_congress }
+        x = 1
+        y = 1
+        cost = 8
+        completion_reward = {
+            add_political_power = 75
+            add_stability = 0.05
+            add_ideas = USA_financial_board
+            unlock_decision = USA_issue_continental_currency
+        }
+    }
+
+    focus = {
+        id = USA_seek_french_aid
+        icon = GFX_goal_fortify
+        prerequisite = { focus = USA_finance_committee }
+        x = 3
+        y = 1
+        cost = 10
+        completion_reward = {
+            FRA = {
+                add_opinion_modifier = {
+                    target = USA
+                    modifier = USA_french_alliance
+                }
+            }
+            add_political_power = 75
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                category = sailing_navy
+            }
+            unlock_decision = USA_request_french_fleet
+        }
+    }
+
+    focus = {
+        id = USA_declaration_of_independence
+        icon = GFX_goal_support_democracy
+        prerequisite = {
+            focus = USA_raise_continental_army
+            focus = USA_finance_committee
+        }
+        x = 0
+        y = 2
+        cost = 14
+        continue_if_invalid = yes
+        available = {
+            has_war_with = GBR
+        }
+        completion_reward = {
+            add_war_support = 0.1
+            add_ideas = USA_independence_idea
+            country_event = { id = american_revolution.1 }
+        }
+    }
+
+    focus = {
+        id = USA_field_command
+        icon = GFX_goal_generic_allies
+        prerequisite = { focus = USA_raise_continental_army }
+        x = -3
+        y = 2
+        cost = 8
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.75
+                uses = 1
+                category = irregular_warfare
+            }
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                category = field_artillery
+            }
+            add_army_experience = 15
+            country_event = { id = american_revolution.7 days = 2 }
+        }
+    }
+
+    focus = {
+        id = USA_frontier_strategy
+        icon = GFX_goal_generic_defence
+        prerequisite = { focus = USA_field_command }
+        x = -4
+        y = 3
+        cost = 10
+        completion_reward = {
+            add_research_slot = 1
+            add_ideas = USA_frontier_rangers
+            add_manpower = 5000
+        }
+    }
+
+    focus = {
+        id = USA_engineer_corps
+        icon = GFX_goal_generic_army_artillery
+        prerequisite = { focus = USA_field_command }
+        x = -2
+        y = 3
+        cost = 10
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.75
+                uses = 1
+                category = supply_chain
+            }
+            add_ideas = USA_engineer_school
+        }
+    }
+
+    focus = {
+        id = USA_saratoga_campaign
+        icon = GFX_goal_generic_military_sphere2
+        prerequisite = {
+            focus = USA_frontier_strategy
+            focus = USA_engineer_corps
+        }
+        x = -3
+        y = 4
+        cost = 12
+        available = {
+            has_war_with = GBR
+        }
+        completion_reward = {
+            add_war_support = 0.05
+            add_army_experience = 25
+            country_event = { id = american_revolution.3 days = 3 }
+        }
+    }
+
+    focus = {
+        id = USA_articles_of_confederation
+        icon = GFX_goal_generic_national_unity
+        prerequisite = { focus = USA_declaration_of_independence }
+        x = -1
+        y = 3
+        cost = 10
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 100
+            add_ideas = USA_confederation_congress
+            unlock_decision = USA_forge_articles_of_confederation
+        }
+    }
+
+    focus = {
+        id = USA_strengthen_congress
+        icon = GFX_goal_support_democracy
+        prerequisite = { focus = USA_articles_of_confederation }
+        x = -1
+        y = 4
+        cost = 10
+        completion_reward = {
+            add_political_power = 120
+            add_research_slot = 1
+            add_ideas = USA_federal_union
+            country_event = { id = american_revolution.8 days = 3 }
+        }
+    }
+
+    focus = {
+        id = USA_empower_states
+        icon = GFX_goal_improve_relations
+        prerequisite = { focus = USA_articles_of_confederation }
+        x = 1
+        y = 4
+        cost = 10
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 75
+            add_ideas = USA_state_sovereignty
+        }
+    }
+
+    focus = {
+        id = USA_constitutional_convention
+        icon = GFX_goal_generic_political_reform
+        prerequisite = {
+            focus = USA_strengthen_congress
+            focus = USA_empower_states
+        }
+        x = 0
+        y = 5
+        cost = 12
+        completion_reward = {
+            add_political_power = 150
+            add_ideas = USA_republican_virtue
+            country_event = { id = american_revolution.4 days = 5 }
+        }
+    }
+
+    focus = {
+        id = USA_create_war_department
+        icon = GFX_goal_generic_military_sphere2
+        prerequisite = { focus = USA_constitutional_convention }
+        x = -1
+        y = 6
+        cost = 10
+        completion_reward = {
+            add_ideas = USA_war_department
+            add_army_experience = 25
+            add_tech_bonus = {
+                bonus = 1.0
+                uses = 1
+                category = professional_army
+            }
+        }
+    }
+
+    focus = {
+        id = USA_department_of_navy
+        icon = GFX_goal_generic_navy
+        prerequisite = { focus = USA_constitutional_convention }
+        x = 1
+        y = 6
+        cost = 10
+        completion_reward = {
+            add_ideas = USA_privateer_charters
+            add_navy_experience = 25
+            add_tech_bonus = {
+                bonus = 1.0
+                uses = 1
+                category = naval_command
+            }
+        }
+    }
+
+    focus = {
+        id = USA_international_recognition
+        icon = GFX_goal_generic_diplomacy
+        prerequisite = {
+            focus = USA_seek_french_aid
+            focus = USA_constitutional_convention
+        }
+        x = 3
+        y = 5
+        cost = 12
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 100
+            add_war_support = 0.05
+            FRA = { add_opinion_modifier = { target = USA modifier = USA_treaty_of_alliance } }
+            country_event = { id = american_revolution.5 days = 2 }
+        }
+    }
+
+    focus = {
+        id = USA_trade_with_spain
+        icon = GFX_goal_generic_trade
+        prerequisite = { focus = USA_international_recognition }
+        x = 4
+        y = 6
+        cost = 8
+        completion_reward = {
+            ESP = { add_opinion_modifier = { target = USA modifier = USA_spanish_trade } }
+            add_political_power = 50
+            add_stability = 0.03
+        }
+    }
+
+    focus = {
+        id = USA_privateer_campaign
+        icon = GFX_goal_generic_navy
+        prerequisite = { focus = USA_department_of_navy focus = USA_seek_french_aid }
+        x = 2
+        y = 7
+        cost = 10
+        completion_reward = {
+            add_ideas = USA_privateer_charters
+            unlock_decision = USA_issue_privateer_letters
+            add_navy_experience = 20
+        }
+    }
+
+    focus = {
+        id = USA_march_south
+        icon = GFX_goal_generic_military_plan
+        prerequisite = { focus = USA_saratoga_campaign }
+        x = -3
+        y = 5
+        cost = 10
+        available = {
+            has_war_with = GBR
+        }
+        completion_reward = {
+            add_war_support = 0.05
+            add_stability = 0.02
+            country_event = { id = american_revolution.6 days = 2 }
+        }
+    }
+
+    focus = {
+        id = USA_victory_parade
+        icon = GFX_goal_generic_army
+        prerequisite = {
+            focus = USA_create_war_department
+            focus = USA_march_south
+        }
+        x = -2
+        y = 7
+        cost = 10
+        completion_reward = {
+            add_war_support = 0.1
+            add_stability = 0.05
+            add_political_power = 150
+            country_event = { id = american_revolution.9 days = 2 }
+        }
+    }
+}

@@ -1,0 +1,572 @@
+namespace = american_revolution
+
+country_event = {
+    id = american_revolution.1
+    title = american_revolution.1.t
+    desc = american_revolution.1.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.1.a
+        add_stability = 0.05
+        add_political_power = 150
+        add_war_support = 0.05
+    }
+    option = {
+        name = american_revolution.1.b
+        add_political_power = 75
+        add_timed_idea = {
+            idea = USA_continental_army
+            days = 730
+        }
+    }
+}
+
+country_event = {
+    id = american_revolution.2
+    title = american_revolution.2.t
+    desc = american_revolution.2.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.2.a
+        add_manpower = 8000
+        add_army_experience = 10
+    }
+    option = {
+        name = american_revolution.2.b
+        add_political_power = 50
+        add_stability = 0.02
+    }
+}
+
+country_event = {
+    id = american_revolution.3
+    title = american_revolution.3.t
+    desc = american_revolution.3.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.3.a
+        add_war_support = 0.05
+        add_army_experience = 20
+    }
+    option = {
+        name = american_revolution.3.b
+        add_political_power = 75
+        add_stability = 0.03
+    }
+}
+
+country_event = {
+    id = american_revolution.4
+    title = american_revolution.4.t
+    desc = american_revolution.4.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.4.a
+        add_political_power = 100
+        add_stability = 0.05
+        add_ideas = USA_republican_virtue
+    }
+    option = {
+        name = american_revolution.4.b
+        add_political_power = 75
+        add_research_slot = 1
+    }
+}
+
+country_event = {
+    id = american_revolution.5
+    title = american_revolution.5.t
+    desc = american_revolution.5.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.5.a
+        add_political_power = 100
+        add_war_support = 0.05
+    }
+    option = {
+        name = american_revolution.5.b
+        add_stability = 0.05
+        add_political_power = 50
+    }
+}
+
+country_event = {
+    id = american_revolution.6
+    title = american_revolution.6.t
+    desc = american_revolution.6.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.6.a
+        add_war_support = 0.05
+        add_manpower = 6000
+    }
+    option = {
+        name = american_revolution.6.b
+        add_political_power = 75
+        add_stability = 0.02
+    }
+}
+
+country_event = {
+    id = american_revolution.7
+    title = american_revolution.7.t
+    desc = american_revolution.7.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.7.a
+        add_army_experience = 20
+        add_timed_idea = {
+            idea = USA_frontier_rangers
+            days = 540
+        }
+    }
+    option = {
+        name = american_revolution.7.b
+        add_political_power = 60
+        add_stability = 0.03
+    }
+}
+
+country_event = {
+    id = american_revolution.8
+    title = american_revolution.8.t
+    desc = american_revolution.8.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.8.a
+        add_political_power = 75
+        add_timed_idea = {
+            idea = USA_congress_in_session
+            days = 720
+        }
+    }
+    option = {
+        name = american_revolution.8.b
+        add_stability = 0.05
+        add_political_power = 40
+    }
+}
+
+country_event = {
+    id = american_revolution.9
+    title = american_revolution.9.t
+    desc = american_revolution.9.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.9.a
+        add_stability = 0.05
+        add_war_support = 0.05
+    }
+    option = {
+        name = american_revolution.9.b
+        add_political_power = 60
+        add_manpower = 5000
+    }
+}
+
+country_event = {
+    id = american_revolution.10
+    title = american_revolution.10.t
+    desc = american_revolution.10.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.10.a
+        USA = {
+            add_political_power = 50
+            add_stability = -0.05
+        }
+        add_political_power = 100
+        add_stability = 0.05
+    }
+    option = {
+        name = american_revolution.10.b
+        USA = {
+            add_stability = 0.05
+        }
+        add_political_power = -50
+        add_war_support = -0.05
+    }
+}
+
+country_event = {
+    id = american_revolution.11
+    title = american_revolution.11.t
+    desc = american_revolution.11.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.11.a
+        add_war_support = 0.05
+        add_army_experience = 15
+    }
+    option = {
+        name = american_revolution.11.b
+        add_political_power = 50
+        add_stability = 0.02
+    }
+}
+
+country_event = {
+    id = american_revolution.12
+    title = american_revolution.12.t
+    desc = american_revolution.12.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.12.a
+        add_navy_experience = 20
+        add_war_support = 0.05
+    }
+    option = {
+        name = american_revolution.12.b
+        add_political_power = 60
+        add_stability = 0.03
+    }
+}
+
+country_event = {
+    id = american_revolution.13
+    title = american_revolution.13.t
+    desc = american_revolution.13.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.13.a
+        USA = { add_opinion_modifier = { target = GBR modifier = GBR_conciliation_offer } }
+        add_stability = 0.05
+    }
+    option = {
+        name = american_revolution.13.b
+        add_war_support = 0.05
+        add_political_power = -50
+    }
+}
+
+country_event = {
+    id = american_revolution.14
+    title = american_revolution.14.t
+    desc = american_revolution.14.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.14.a
+        add_political_power = 100
+        add_war_support = 0.05
+    }
+    option = {
+        name = american_revolution.14.b
+        add_political_power = 75
+        add_navy_experience = 20
+    }
+}
+
+country_event = {
+    id = american_revolution.15
+    title = american_revolution.15.t
+    desc = american_revolution.15.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.15.a
+        add_stability = 0.05
+        add_political_power = 150
+    }
+    option = {
+        name = american_revolution.15.b
+        add_war_support = 0.1
+        add_army_experience = 25
+    }
+}
+
+country_event = {
+    id = american_revolution.16
+    title = american_revolution.16.t
+    desc = american_revolution.16.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.16.a
+        add_manpower = 8000
+        add_army_experience = 15
+    }
+    option = {
+        name = american_revolution.16.b
+        add_political_power = 50
+        add_war_support = 0.05
+    }
+}
+
+country_event = {
+    id = american_revolution.17
+    title = american_revolution.17.t
+    desc = american_revolution.17.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.17.a
+        add_stability = 0.04
+        add_manpower = 6000
+    }
+    option = {
+        name = american_revolution.17.b
+        add_political_power = 60
+        add_war_support = 0.03
+    }
+}
+
+country_event = {
+    id = american_revolution.18
+    title = american_revolution.18.t
+    desc = american_revolution.18.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.18.a
+        add_navy_experience = 25
+        add_war_support = 0.04
+    }
+    option = {
+        name = american_revolution.18.b
+        add_political_power = 60
+        add_stability = 0.04
+    }
+}
+
+country_event = {
+    id = american_revolution.20
+    title = american_revolution.20.t
+    desc = american_revolution.20.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.20.a
+        add_political_power = -25
+        USA = {
+            add_political_power = 75
+            add_war_support = 0.1
+        }
+        GBR = {
+            add_war_support = -0.05
+        }
+    }
+    option = {
+        name = american_revolution.20.b
+        add_stability = 0.05
+    }
+}
+
+country_event = {
+    id = american_revolution.21
+    title = american_revolution.21.t
+    desc = american_revolution.21.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.21.a
+        add_political_power = 60
+        add_research_slot = 1
+    }
+    option = {
+        name = american_revolution.21.b
+        add_stability = 0.05
+        add_political_power = 40
+    }
+}
+
+country_event = {
+    id = american_revolution.22
+    title = american_revolution.22.t
+    desc = american_revolution.22.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.22.a
+        add_war_support = 0.05
+        add_navy_experience = 20
+    }
+    option = {
+        name = american_revolution.22.b
+        add_political_power = 60
+        add_stability = 0.03
+    }
+}
+
+country_event = {
+    id = american_revolution.23
+    title = american_revolution.23.t
+    desc = american_revolution.23.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.23.a
+        add_manpower = 8000
+        add_army_experience = 15
+    }
+    option = {
+        name = american_revolution.23.b
+        add_political_power = 60
+        add_stability = 0.04
+    }
+}
+
+country_event = {
+    id = american_revolution.24
+    title = american_revolution.24.t
+    desc = american_revolution.24.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.24.a
+        add_research_slot = 1
+        add_political_power = 60
+    }
+    option = {
+        name = american_revolution.24.b
+        add_stability = 0.05
+        add_war_support = 0.05
+    }
+}
+
+country_event = {
+    id = american_revolution.25
+    title = american_revolution.25.t
+    desc = american_revolution.25.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.25.a
+        add_stability = 0.05
+        add_war_support = 0.05
+    }
+    option = {
+        name = american_revolution.25.b
+        add_political_power = 150
+        add_research_slot = 1
+    }
+}
+
+country_event = {
+    id = american_revolution.26
+    title = american_revolution.26.t
+    desc = american_revolution.26.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.26.a
+        add_political_power = -25
+        add_war_support = 0.03
+        USA = {
+            add_political_power = 35
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_0
+                amount = 800
+                producer = FRA
+            }
+        }
+    }
+    option = {
+        name = american_revolution.26.b
+        add_political_power = 50
+        add_stability = 0.03
+    }
+}
+
+country_event = {
+    id = american_revolution.27
+    title = american_revolution.27.t
+    desc = american_revolution.27.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.27.a
+        add_stability = 0.04
+        add_army_experience = 15
+    }
+    option = {
+        name = american_revolution.27.b
+        add_political_power = 60
+        add_navy_experience = 10
+    }
+}
+
+country_event = {
+    id = american_revolution.28
+    title = american_revolution.28.t
+    desc = american_revolution.28.d
+    picture = GFX_report_event_generic
+
+    is_triggered_only = yes
+
+    option = {
+        name = american_revolution.28.a
+        add_war_support = 0.08
+        add_navy_experience = 20
+    }
+    option = {
+        name = american_revolution.28.b
+        add_political_power = 80
+        add_stability = 0.05
+    }
+}

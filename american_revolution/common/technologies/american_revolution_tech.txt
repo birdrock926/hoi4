@@ -1,0 +1,401 @@
+technologies = {
+    colonial_militias = {
+        area = infantry
+        folder = infantry_folder
+        start_year = 1765
+        cost = 1.0
+        categories = { colonial_infantry irregular_warfare }
+        start_tech = yes
+        enable_equipments = { infantry_equipment_0 }
+        modifier = {
+            land_reinforce_rate = 0.02
+            infantry_attack = 0.02
+        }
+    }
+
+    minutemen_tactics = {
+        area = infantry
+        folder = infantry_folder
+        start_year = 1768
+        cost = 1.2
+        categories = { irregular_warfare }
+        prerequisites = { colonial_militias }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            max_dig_in = 1
+            recon_factor = 0.05
+        }
+    }
+
+    continental_regulars = {
+        area = infantry
+        folder = infantry_folder
+        start_year = 1772
+        cost = 1.5
+        categories = { colonial_infantry professional_army }
+        prerequisites = { minutemen_tactics }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            infantry_attack = 0.05
+            infantry_defence = 0.05
+            training_time_factor = -0.05
+        }
+    }
+
+    light_infantry_skirmishers = {
+        area = infantry
+        folder = infantry_folder
+        start_year = 1774
+        cost = 1.5
+        categories = { irregular_warfare }
+        prerequisites = { continental_regulars }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            breakthrough = 0.05
+            land_night_attack = 0.05
+        }
+    }
+
+    engineer_corps_established = {
+        area = support
+        folder = support_folder
+        start_year = 1773
+        cost = 1.2
+        categories = { professional_army }
+        prerequisites = { continental_regulars }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            max_dig_in = 1
+            entrenchment_speed = 0.1
+        }
+    }
+
+    horse_drawn_logistics = {
+        area = support
+        folder = support_folder
+        start_year = 1770
+        cost = 1.0
+        categories = { logistics }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            supply_consumption = -0.05
+            org_loss_when_moving = -0.05
+        }
+    }
+
+    wagon_train_networks = {
+        area = support
+        folder = support_folder
+        start_year = 1774
+        cost = 1.3
+        categories = { logistics supply_chain }
+        prerequisites = { horse_drawn_logistics }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            army_org_factor = 0.05
+            supply_consumption = -0.05
+        }
+    }
+
+    quartermaster_corps = {
+        area = support
+        folder = support_folder
+        start_year = 1776
+        cost = 1.5
+        categories = { supply_chain }
+        prerequisites = { wagon_train_networks engineer_corps_established }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            planning_speed = 0.1
+            army_org_factor = 0.05
+        }
+    }
+
+    light_field_artillery = {
+        area = artillery
+        folder = artillery_folder
+        start_year = 1770
+        cost = 1.3
+        categories = { field_artillery }
+        prerequisites = { colonial_militias }
+        enable_equipments = { artillery_equipment_0 }
+        modifier = {
+            soft_attack = 0.05
+            breakthrough = 0.03
+        }
+    }
+
+    siege_artillery_school = {
+        area = artillery
+        folder = artillery_folder
+        start_year = 1775
+        cost = 1.6
+        categories = { field_artillery }
+        prerequisites = { light_field_artillery }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            fort_attack = 0.1
+            soft_attack = 0.05
+        }
+    }
+
+    horse_artillery_batteries = {
+        area = artillery
+        folder = artillery_folder
+        start_year = 1777
+        cost = 1.6
+        categories = { horse_artillery }
+        prerequisites = { siege_artillery_school wagon_train_networks }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            breakthrough = 0.05
+            land_speed = 0.05
+        }
+    }
+
+    early_navy = {
+        area = naval
+        folder = naval_folder
+        start_year = 1765
+        cost = 1.2
+        categories = { sailing_navy }
+        modifier = {
+            naval_speed = 0.05
+            naval_hit_chance = 0.02
+        }
+    }
+
+    privateer_doctrine = {
+        area = naval
+        folder = naval_folder
+        start_year = 1770
+        cost = 1.3
+        categories = { sailing_navy commerce }
+        prerequisites = { early_navy }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            convoy_raiding_efficiency = 0.1
+            naval_attrition = -0.05
+        }
+    }
+
+    frigate_designs = {
+        area = naval
+        folder = naval_folder
+        start_year = 1772
+        cost = 1.5
+        categories = { sailing_navy }
+        prerequisites = { privateer_doctrine }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            screen_attack = 0.05
+            naval_coordination = 0.05
+        }
+    }
+
+    ship_of_the_line_program = {
+        area = naval
+        folder = naval_folder
+        start_year = 1775
+        cost = 1.8
+        categories = { sailing_navy naval_command }
+        prerequisites = { frigate_designs }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            capital_ship_attack = 0.05
+            capital_ship_defence = 0.05
+        }
+    }
+
+    admiralty_colleges = {
+        area = naval
+        folder = naval_folder
+        start_year = 1777
+        cost = 1.6
+        categories = { naval_command }
+        prerequisites = { ship_of_the_line_program }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            naval_experience_gain_factor = 0.1
+            naval_hit_chance = 0.03
+        }
+    }
+
+    merchant_convoys = {
+        area = naval
+        folder = trade_folder
+        start_year = 1770
+        cost = 1.0
+        categories = { commerce }
+        modifier = {
+            convoy_escort_efficiency = 0.05
+            trade_opinion_factor = 0.1
+        }
+    }
+
+    convoy_escort_doctrine = {
+        area = naval
+        folder = trade_folder
+        start_year = 1775
+        cost = 1.3
+        categories = { commerce naval_command }
+        prerequisites = { merchant_convoys privateer_doctrine }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            convoy_defense = 0.1
+            escort_efficiency = 0.05
+        }
+    }
+
+    powder_mills = {
+        area = industry
+        folder = industry_folder
+        start_year = 1768
+        cost = 1.0
+        categories = { early_industry }
+        modifier = {
+            production_speed_infantry_equipment_factor = 0.05
+            line_change_production_efficiency_factor = 0.05
+        }
+    }
+
+    state_arsenals = {
+        area = industry
+        folder = industry_folder
+        start_year = 1772
+        cost = 1.4
+        categories = { early_industry }
+        prerequisites = { powder_mills }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            production_speed_artillery_factor = 0.05
+            industrial_capacity_factory = 0.05
+        }
+    }
+
+    iron_foundries = {
+        area = industry
+        folder = industry_folder
+        start_year = 1774
+        cost = 1.5
+        categories = { proto_industry }
+        prerequisites = { state_arsenals }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            production_speed_industrial_complex_factor = 0.05
+            production_factory_start_efficiency_factor = 0.05
+        }
+    }
+
+    colonial_shipyards = {
+        area = industry
+        folder = industry_folder
+        start_year = 1775
+        cost = 1.5
+        categories = { proto_industry sailing_navy }
+        prerequisites = { state_arsenals merchant_convoys }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            dockyard_output = 0.05
+            naval_build_speed = 0.1
+        }
+    }
+
+    textile_mills = {
+        area = industry
+        folder = industry_folder
+        start_year = 1776
+        cost = 1.5
+        categories = { proto_industry }
+        prerequisites = { iron_foundries }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            consumer_goods_factor = -0.02
+            industrial_capacity_dockyard = 0.05
+        }
+    }
+
+    revolutionary_fervor = {
+        area = society
+        folder = doctrine_folder
+        start_year = 1775
+        cost = 1.6
+        categories = { revolutionary_spirit enlightenment_thought }
+        prerequisites = { continental_regulars }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            army_morale = 0.1
+            war_support_factor = 0.1
+        }
+    }
+
+    continental_bureaucracy = {
+        area = society
+        folder = doctrine_folder
+        start_year = 1776
+        cost = 1.6
+        categories = { governance }
+        prerequisites = { revolutionary_fervor }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            political_power_gain = 0.1
+            stability_factor = 0.05
+        }
+    }
+
+    wartime_taxation = {
+        area = society
+        folder = doctrine_folder
+        start_year = 1777
+        cost = 1.5
+        categories = { governance proto_industry }
+        prerequisites = { continental_bureaucracy iron_foundries }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            trade_laws_cost_factor = -0.25
+            production_speed_arms_factory_factor = 0.05
+        }
+    }
+
+    enlightenment_salons = {
+        area = society
+        folder = doctrine_folder
+        start_year = 1773
+        cost = 1.4
+        categories = { enlightenment_thought }
+        prerequisites = { minutemen_tactics }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            research_speed_factor = 0.05
+            idea_cost_factor = -0.05
+        }
+    }
+
+    crown_patrons = {
+        area = society
+        folder = doctrine_folder
+        start_year = 1774
+        cost = 1.6
+        categories = { royalism governance }
+        prerequisites = { enlightenment_salons }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            stability_factor = 0.1
+            planning_speed = 0.05
+        }
+    }
+
+    loyalist_networks = {
+        area = society
+        folder = doctrine_folder
+        start_year = 1776
+        cost = 1.5
+        categories = { royalism irregular_warfare }
+        prerequisites = { crown_patrons }
+        ai_will_do = { factor = 1 }
+        modifier = {
+            resistance_growth_on_our_occupied_states = -0.1
+            compliance_growth_on_our_occupied_states = 0.05
+        }
+    }
+}

@@ -1,0 +1,9 @@
+division_names = {
+    GBR = {
+        infantry = {
+            "1st Guards"
+            "2nd Grenadiers"
+            "3rd Foot"
+        }
+    }
+}

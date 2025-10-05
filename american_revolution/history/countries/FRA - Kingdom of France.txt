@@ -1,0 +1,40 @@
+capital = 118
+oob = "FRA_1775"
+set_politics = {
+    ruling_party = monarchy
+    last_election = "1774.5.10"
+    election_frequency = 48
+    elections_allowed = no
+}
+set_technology = {
+    colonial_militias = 1
+    continental_regulars = 1
+    horse_drawn_logistics = 1
+    light_field_artillery = 1
+    early_navy = 1
+    frigate_designs = 1
+    privateer_doctrine = 1
+    powder_mills = 1
+}
+set_rule = {
+    can_be_tag_switched = no
+}
+create_country_leader = {
+    name = "Louis XVI"
+    picture = GFX_portrait_generic_monarch
+    ideology = monarchy
+}
+create_field_marshal = {
+    name = "Jean-Baptiste de Rochambeau"
+    picture = GFX_portrait_generic_general
+    skill = 3
+    attack_skill = 3
+    defense_skill = 3
+    planning_skill = 4
+    logistics_skill = 2
+    traits = { organizer }
+}
+
+1775.4.19 = {
+    add_political_power = 80
+}

@@ -1,0 +1,12 @@
+capital = 1
+set_politics = {
+    ruling_party = neutrality
+    last_election = "1770.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+set_rule = {
+    can_be_tag_switched = no
+    can_decline_call_to_war = yes
+}
+set_country_flag = locked_neutral

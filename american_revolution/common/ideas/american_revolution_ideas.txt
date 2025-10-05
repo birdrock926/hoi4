@@ -1,0 +1,200 @@
+ideas = {
+    USA_continental_army = {
+        allowed = { tag = USA }
+        modifier = {
+            division_training_time = -0.05
+            army_morale = 0.05
+            land_reinforce_rate = 0.03
+        }
+    }
+
+    USA_congress_in_session = {
+        allowed = { tag = USA }
+        modifier = {
+            political_power_gain = 0.15
+            stability_factor = 0.05
+        }
+    }
+
+    USA_financial_board = {
+        allowed = { tag = USA }
+        modifier = {
+            consumer_goods_factor = -0.03
+            production_speed_industrial_complex_factor = 0.05
+        }
+    }
+
+    USA_frontier_rangers = {
+        allowed = { tag = USA }
+        modifier = {
+            special_forces_attack_factor = 0.05
+            recon_factor = 0.1
+        }
+    }
+
+    USA_engineer_school = {
+        allowed = { tag = USA }
+        modifier = {
+            max_dig_in = 2
+            entrenchment_speed = 0.1
+        }
+    }
+
+    USA_confederation_congress = {
+        allowed = { tag = USA }
+        modifier = {
+            political_power_gain = 0.1
+            stability_factor = 0.05
+        }
+    }
+
+    USA_federal_union = {
+        allowed = { tag = USA }
+        modifier = {
+            recruitable_population_factor = 0.05
+            research_speed_factor = 0.03
+        }
+    }
+
+    USA_state_sovereignty = {
+        allowed = { tag = USA }
+        modifier = {
+            political_power_gain = 0.15
+            stability_factor = -0.03
+            compliance_growth_on_our_occupied_states = 0.05
+        }
+    }
+
+    USA_republican_virtue = {
+        allowed = { tag = USA }
+        modifier = {
+            stability_factor = 0.1
+            war_support_factor = 0.05
+            idea_cost_factor = -0.05
+        }
+    }
+
+    USA_independence_idea = {
+        allowed = { tag = USA }
+        modifier = {
+            stability_factor = 0.05
+            war_support_factor = 0.1
+        }
+    }
+
+    USA_war_department = {
+        allowed = { tag = USA }
+        modifier = {
+            army_org_factor = 0.05
+            land_doctrine_cost_factor = -0.1
+        }
+    }
+
+    USA_privateer_charters = {
+        allowed = { tag = USA }
+        modifier = {
+            convoy_raiding_efficiency = 0.1
+            naval_experience_gain_factor = 0.05
+        }
+    }
+
+    GBR_imperial_command = {
+        allowed = { tag = GBR }
+        modifier = {
+            planning_speed = 0.05
+            army_org_factor = 0.05
+        }
+    }
+
+    GBR_royal_navy_supremacy = {
+        allowed = { tag = GBR }
+        modifier = {
+            naval_speed = 0.05
+            naval_hit_chance = 0.05
+        }
+    }
+
+    GBR_conciliation_cabinet = {
+        allowed = { tag = GBR }
+        modifier = {
+            stability_factor = 0.05
+            political_power_gain = 0.1
+        }
+    }
+
+    GBR_hessian_contracts = {
+        allowed = { tag = GBR }
+        modifier = {
+            division_training_time = -0.05
+            recruitable_population_factor = 0.05
+        }
+    }
+
+    FRA_reform_committees = {
+        allowed = { tag = FRA }
+        modifier = {
+            political_power_gain = 0.1
+            idea_cost_factor = -0.05
+        }
+    }
+
+    FRA_royal_navy_reforms = {
+        allowed = { tag = FRA }
+        modifier = {
+            naval_build_speed = 0.1
+            dockyard_output = 0.05
+        }
+    }
+
+    FRA_volunteer_corps = {
+        allowed = { tag = FRA }
+        modifier = {
+            army_experience_gain = 0.05
+            land_doctrine_cost_factor = -0.05
+        }
+    }
+
+    FRA_enlightenment_salons = {
+        allowed = { tag = FRA }
+        modifier = {
+            research_speed_factor = 0.05
+            stability_factor = 0.03
+        }
+    }
+
+}
+
+country_opinion_modifiers = {
+    USA_french_alliance = {
+        value = 75
+        decay = 0.33
+    }
+    USA_treaty_of_alliance = {
+        value = 50
+        decay = 0.2
+    }
+    USA_spanish_trade = {
+        value = 35
+        decay = 0.2
+    }
+    FRA_secret_aid = {
+        value = 40
+        decay = 0.2
+    }
+    GBR_french_rivalry = {
+        value = -60
+        decay = 0.2
+    }
+    FRA_spanish_coordination = {
+        value = 40
+        decay = 0.2
+    }
+    FRA_war_of_vengeance = {
+        value = -80
+        decay = 0.2
+    }
+    GBR_conciliation_offer = {
+        value = 35
+        decay = 0.15
+    }
+}

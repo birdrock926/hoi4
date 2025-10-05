@@ -1,0 +1,27 @@
+division_template = {
+    name = "Continental Line"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+    }
+    support = {
+        artillery_brigade = { x = 0 y = 0 }
+    }
+}
+
+units = {
+    division = {
+        name = "New England Line"
+        location = 183
+        template = "Continental Line"
+        start_experience_factor = 0.2
+    }
+    division = {
+        name = "Virginia Militia"
+        location = 441
+        template = "Continental Line"
+        start_experience_factor = 0.1
+    }
+}

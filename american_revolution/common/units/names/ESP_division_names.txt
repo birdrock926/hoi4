@@ -1,0 +1,9 @@
+division_names = {
+    ESP = {
+        infantry = {
+            "1a División"
+            "2a División"
+            "3a División"
+        }
+    }
+}

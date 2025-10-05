@@ -1,0 +1,42 @@
+capital = 183
+oob = "USA_1775"
+set_politics = {
+    ruling_party = liberty
+    last_election = "1774.07.04"
+    election_frequency = 48
+    elections_allowed = yes
+}
+set_technology = {
+    colonial_militias = 1
+    minutemen_tactics = 1
+    horse_drawn_logistics = 1
+    powder_mills = 1
+    light_field_artillery = 1
+}
+set_country_flag = usa_playable
+set_rule = {
+    can_create_factions = yes
+}
+create_country_leader = {
+    name = "George Washington"
+    desc = "POLITICS_GEORGE_WASHINGTON_DESC"
+    picture = GFX_portrait_generic_republic_leader
+    expire = "1800.1.1"
+    ideology = liberty
+    traits = { inspirational_leader army_chief_offensive_2 }
+}
+create_field_marshal = {
+    name = "George Washington"
+    picture = GFX_portrait_generic_general
+    skill = 4
+    attack_skill = 3
+    defense_skill = 4
+    planning_skill = 4
+    logistics_skill = 3
+    traits = { inspirational_leader organizer }
+}
+add_ideas = USA_continental_army
+
+1775.4.19 = {
+    add_political_power = 150
+}
