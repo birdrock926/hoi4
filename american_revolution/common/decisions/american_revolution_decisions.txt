@@ -1,0 +1,183 @@
+political_decisions = {
+    USA_forge_articles_of_confederation = {
+        icon = GFX_decision_generic_political_reform
+        allowed = {
+            tag = USA
+            has_idea = USA_independence_idea
+        }
+        visible = { tag = USA }
+        cost = 75
+        cooldown_days = 60
+        complete_effect = {
+            add_stability = 0.1
+            add_political_power = 100
+        }
+    }
+
+    USA_issue_continental_currency = {
+        icon = GFX_decision_generic_finance
+        allowed = {
+            tag = USA
+        }
+        visible = {
+            tag = USA
+            has_idea = USA_financial_board
+        }
+        cost = 50
+        cooldown_days = 45
+        available = {
+            stability > 0.2
+        }
+        complete_effect = {
+            add_political_power = 50
+            add_stability = -0.03
+            add_timed_idea = {
+                idea = USA_financial_board
+                days = 180
+            }
+        }
+    }
+
+    USA_request_french_fleet = {
+        icon = GFX_decision_generic_allies
+        allowed = { tag = USA }
+        visible = {
+            tag = USA
+            FRA = { has_war_with = GBR }
+        }
+        cost = 75
+        cooldown_days = 90
+        complete_effect = {
+            FRA = {
+                add_navy_experience = 25
+                add_equipment_to_stockpile = {
+                    type = convoy_1
+                    amount = 10
+                }
+            }
+            add_navy_experience = 15
+        }
+    }
+
+    USA_issue_privateer_letters = {
+        icon = GFX_decision_generic_navy
+        allowed = { tag = USA }
+        visible = {
+            tag = USA
+            has_idea = USA_privateer_charters
+        }
+        cost = 60
+        cooldown_days = 60
+        complete_effect = {
+            add_navy_experience = 10
+            add_ideas = USA_privateer_charters
+        }
+    }
+
+    USA_raise_militia = {
+        icon = GFX_decision_generic_military_recruitment
+        allowed = {
+            tag = USA
+        }
+        visible = {
+            tag = USA
+            has_war_with = GBR
+        }
+        cost = 55
+        cooldown_days = 45
+        complete_effect = {
+            add_manpower = 12000
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_0
+                amount = 1800
+                producer = USA
+            }
+        }
+    }
+}
+
+foreign_policy = {
+    FRA_support_colonial_cause = {
+        icon = GFX_decision_generic_support_democracy
+        allowed = {
+            tag = FRA
+        }
+        visible = {
+            tag = FRA
+            USA = { has_war_with = GBR }
+        }
+        complete_effect = {
+            add_political_power = -50
+            USA = {
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment_0
+                    amount = 1000
+                    producer = FRA
+                }
+                add_political_power = 50
+            }
+        }
+        days_remove = 1
+        cooldown_days = 60
+    }
+
+    FRA_prepare_expeditionary_force = {
+        icon = GFX_decision_generic_army
+        allowed = { tag = FRA }
+        visible = {
+            tag = FRA
+            has_war_with = GBR
+        }
+        cost = 80
+        cooldown_days = 120
+        complete_effect = {
+            add_army_experience = 20
+            add_manpower = 8000
+        }
+    }
+
+    GBR_raise_loyalist_militias = {
+        icon = GFX_decision_generic_military_recruitment
+        allowed = { tag = GBR }
+        visible = {
+            tag = GBR
+            has_war_with = USA
+        }
+        cost = 65
+        cooldown_days = 60
+        complete_effect = {
+            add_manpower = 10000
+            add_political_power = -25
+        }
+    }
+
+    GBR_enforce_coastal_blockade = {
+        icon = GFX_decision_generic_navy
+        allowed = { tag = GBR }
+        visible = {
+            tag = GBR
+            has_war_with = USA
+        }
+        cost = 50
+        cooldown_days = 45
+        complete_effect = {
+            add_navy_experience = 15
+            USA = {
+                add_stability = -0.03
+                add_political_power = -50
+            }
+        }
+    }
+
+    GBR_offer_concessions = {
+        icon = GFX_decision_generic_diplomacy
+        allowed = { tag = GBR }
+        visible = { tag = GBR }
+        cost = 70
+        cooldown_days = 90
+        complete_effect = {
+            add_stability = 0.05
+            USA = { add_opinion_modifier = { target = GBR modifier = GBR_conciliation_offer } }
+        }
+    }
+}

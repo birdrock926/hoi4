@@ -1,0 +1,21 @@
+division_template = {
+    name = "Royal Line"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+    }
+    support = {
+        artillery_brigade = { x = 0 y = 0 }
+    }
+}
+
+units = {
+    division = {
+        name = "Régiment de Bourbon"
+        location = 118
+        template = "Royal Line"
+        start_experience_factor = 0.25
+    }
+}

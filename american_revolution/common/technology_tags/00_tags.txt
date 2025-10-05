@@ -1,0 +1,50 @@
+technology_tags = {
+    colonial_infantry = {
+        texture = "GFX_tech_infantry"
+    }
+    professional_army = {
+        texture = "GFX_tech_infantry"
+    }
+    irregular_warfare = {
+        texture = "GFX_tech_infantry"
+    }
+    field_artillery = {
+        texture = "GFX_tech_artillery"
+    }
+    horse_artillery = {
+        texture = "GFX_tech_artillery"
+    }
+    logistics = {
+        texture = "GFX_tech_support"
+    }
+    supply_chain = {
+        texture = "GFX_tech_support"
+    }
+    sailing_navy = {
+        texture = "GFX_tech_navy"
+    }
+    naval_command = {
+        texture = "GFX_tech_navy"
+    }
+    commerce = {
+        texture = "GFX_tech_industry"
+    }
+    early_industry = {
+        texture = "GFX_tech_industry"
+    }
+    proto_industry = {
+        texture = "GFX_tech_industry"
+    }
+    governance = {
+        texture = "GFX_tech_doctrine"
+    }
+    enlightenment_thought = {
+        texture = "GFX_tech_doctrine"
+    }
+    revolutionary_spirit = {
+        texture = "GFX_tech_doctrine"
+    }
+    royalism = {
+        texture = "GFX_tech_doctrine"
+    }
+}

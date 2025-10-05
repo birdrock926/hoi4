@@ -1,0 +1,44 @@
+capital = 126
+oob = "GBR_1775"
+set_politics = {
+    ruling_party = monarchy
+    last_election = "1774.10.10"
+    election_frequency = 48
+    elections_allowed = no
+}
+set_technology = {
+    colonial_militias = 1
+    continental_regulars = 1
+    horse_drawn_logistics = 1
+    light_field_artillery = 1
+    siege_artillery_school = 1
+    early_navy = 1
+    frigate_designs = 1
+    ship_of_the_line_program = 1
+    merchant_convoys = 1
+    state_arsenals = 1
+}
+set_rule = {
+    can_be_tag_switched = no
+}
+create_country_leader = {
+    name = "George III"
+    picture = GFX_portrait_generic_monarch
+    ideology = monarchy
+    traits = { }
+}
+create_field_marshal = {
+    name = "William Howe"
+    picture = GFX_portrait_generic_general
+    skill = 4
+    attack_skill = 4
+    defense_skill = 3
+    planning_skill = 3
+    logistics_skill = 3
+    traits = { offensive_doctrine }
+}
+add_ideas = war_economy
+
+1775.4.19 = {
+    add_political_power = 100
+}

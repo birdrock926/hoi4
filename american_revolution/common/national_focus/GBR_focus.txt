@@ -1,0 +1,280 @@
+focus_tree = {
+    id = GBR_focus
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = GBR
+        }
+    }
+
+    default = no
+
+    focus = {
+        id = GBR_crush_rebellion
+        icon = GFX_goal_generic_army
+        x = 0
+        y = 0
+        cost = 7
+        completion_reward = {
+            add_political_power = 80
+            add_stability = 0.05
+            add_ideas = GBR_imperial_command
+        }
+    }
+
+    focus = {
+        id = GBR_reinforce_garrisons
+        icon = GFX_goal_generic_defence
+        prerequisite = { focus = GBR_crush_rebellion }
+        x = -3
+        y = 1
+        cost = 7
+        completion_reward = {
+            add_manpower = 20000
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                category = professional_army
+            }
+            country_event = { id = american_revolution.10 days = 3 }
+        }
+    }
+
+    focus = {
+        id = GBR_hire_hessians
+        icon = GFX_goal_generic_military_sphere
+        prerequisite = { focus = GBR_reinforce_garrisons }
+        x = -4
+        y = 2
+        cost = 8
+        completion_reward = {
+            add_ideas = GBR_hessian_contracts
+            add_manpower = 15000
+            add_army_experience = 20
+            country_event = { id = american_revolution.16 days = 2 }
+        }
+    }
+
+    focus = {
+        id = GBR_high_command
+        icon = GFX_goal_generic_high_command
+        prerequisite = { focus = GBR_crush_rebellion }
+        x = -1
+        y = 1
+        cost = 8
+        completion_reward = {
+            add_army_experience = 20
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                category = field_artillery
+            }
+        }
+    }
+
+    focus = {
+        id = GBR_southern_strategy
+        icon = GFX_goal_generic_military_plan
+        prerequisite = { focus = GBR_high_command }
+        x = -2
+        y = 2
+        cost = 10
+        completion_reward = {
+            add_war_support = 0.05
+            country_event = { id = american_revolution.11 days = 2 }
+        }
+    }
+
+    focus = {
+        id = GBR_loyalist_militias
+        icon = GFX_goal_generic_military_sphere2
+        prerequisite = { focus = GBR_southern_strategy }
+        x = -2
+        y = 3
+        cost = 10
+        completion_reward = {
+            add_research_slot = 1
+            unlock_decision = GBR_raise_loyalist_militias
+            add_ideas = GBR_conciliation_cabinet
+            country_event = { id = american_revolution.17 days = 3 }
+        }
+    }
+
+    focus = {
+        id = GBR_control_seas
+        icon = GFX_goal_generic_navy
+        prerequisite = { focus = GBR_crush_rebellion }
+        x = 2
+        y = 1
+        cost = 8
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.75
+                uses = 1
+                category = naval_command
+            }
+            add_ideas = GBR_royal_navy_supremacy
+        }
+    }
+
+    focus = {
+        id = GBR_enforce_blockade
+        icon = GFX_goal_generic_navy_battleship
+        prerequisite = { focus = GBR_control_seas }
+        x = 3
+        y = 2
+        cost = 10
+        completion_reward = {
+            unlock_decision = GBR_enforce_coastal_blockade
+            add_war_support = 0.05
+            add_navy_experience = 25
+        }
+    }
+
+    focus = {
+        id = GBR_caribbean_pressure
+        icon = GFX_goal_generic_resource
+        prerequisite = { focus = GBR_enforce_blockade }
+        x = 4
+        y = 3
+        cost = 10
+        completion_reward = {
+            add_political_power = 80
+            country_event = { id = american_revolution.12 days = 3 }
+        }
+    }
+
+    focus = {
+        id = GBR_global_reinforcements
+        icon = GFX_goal_generic_allies
+        prerequisite = { focus = GBR_control_seas }
+        x = 1
+        y = 2
+        cost = 9
+        completion_reward = {
+            add_stability = 0.03
+            add_manpower = 10000
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                category = supply_chain
+            }
+        }
+    }
+
+    focus = {
+        id = GBR_reform_parliament
+        icon = GFX_goal_support_democracy
+        prerequisite = { focus = GBR_crush_rebellion }
+        x = 0
+        y = 1
+        cost = 10
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 100
+            unlock_decision = GBR_offer_concessions
+        }
+    }
+
+    focus = {
+        id = GBR_peace_commission
+        icon = GFX_goal_generic_diplomacy
+        prerequisite = { focus = GBR_reform_parliament }
+        x = 0
+        y = 2
+        cost = 10
+        completion_reward = {
+            country_event = { id = american_revolution.13 days = 2 }
+            add_political_power = 75
+        }
+    }
+
+    focus = {
+        id = GBR_parliamentary_inquiry
+        icon = GFX_goal_generic_political_reform
+        prerequisite = { focus = GBR_reform_parliament }
+        x = 1
+        y = 2
+        cost = 9
+        completion_reward = {
+            add_research_slot = 1
+            add_stability = 0.05
+        }
+    }
+
+    focus = {
+        id = GBR_imperial_redeployment
+        icon = GFX_goal_generic_forceful_treaty
+        prerequisite = { focus = GBR_parliamentary_inquiry }
+        x = 1
+        y = 3
+        cost = 12
+        completion_reward = {
+            add_war_support = 0.05
+            add_army_experience = 25
+            add_navy_experience = 15
+            country_event = { id = american_revolution.18 days = 3 }
+        }
+    }
+
+    focus = {
+        id = GBR_crush_french_influence
+        icon = GFX_goal_generic_break_the_wall
+        prerequisite = { focus = GBR_global_reinforcements focus = GBR_imperial_redeployment }
+        x = 2
+        y = 4
+        cost = 12
+        completion_reward = {
+            add_political_power = 100
+            FRA = {
+                add_opinion_modifier = {
+                    target = GBR
+                    modifier = GBR_french_rivalry
+                }
+            }
+            country_event = { id = american_revolution.14 days = 5 }
+        }
+    }
+
+    focus = {
+        id = GBR_secure_india
+        icon = GFX_goal_generic_imperial
+        prerequisite = { focus = GBR_imperial_redeployment }
+        x = 0
+        y = 4
+        cost = 10
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 100
+        }
+    }
+
+    focus = {
+        id = GBR_dominate_atlantic
+        icon = GFX_goal_generic_navy
+        prerequisite = { focus = GBR_caribbean_pressure focus = GBR_crush_french_influence }
+        x = 3
+        y = 5
+        cost = 12
+        completion_reward = {
+            add_navy_experience = 35
+            add_ideas = GBR_royal_navy_supremacy
+            add_war_support = 0.1
+        }
+    }
+
+    focus = {
+        id = GBR_new_world_order
+        icon = GFX_goal_generic_major_war
+        prerequisite = { focus = GBR_dominate_atlantic focus = GBR_secure_india }
+        x = 1
+        y = 6
+        cost = 12
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 150
+            country_event = { id = american_revolution.15 days = 7 }
+        }
+    }
+}

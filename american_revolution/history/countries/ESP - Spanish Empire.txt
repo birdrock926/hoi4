@@ -1,0 +1,38 @@
+capital = 177
+oob = "ESP_1775"
+set_politics = {
+    ruling_party = monarchy
+    last_election = "1773.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+set_technology = {
+    colonial_militias = 1
+    minutemen_tactics = 1
+    horse_drawn_logistics = 1
+    light_field_artillery = 1
+    early_navy = 1
+    merchant_convoys = 1
+    powder_mills = 1
+}
+set_rule = {
+    can_be_tag_switched = no
+}
+create_country_leader = {
+    name = "Charles III"
+    picture = GFX_portrait_generic_monarch
+    ideology = monarchy
+}
+create_field_marshal = {
+    name = "Bernardo de Gálvez"
+    picture = GFX_portrait_generic_general
+    skill = 3
+    attack_skill = 3
+    defense_skill = 3
+    planning_skill = 3
+    logistics_skill = 3
+}
+
+1775.4.19 = {
+    add_political_power = 70
+}

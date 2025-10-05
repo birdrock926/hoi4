@@ -1,0 +1,271 @@
+focus_tree = {
+    id = FRA_focus
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = FRA
+        }
+    }
+
+    default = no
+
+    focus = {
+        id = FRA_rebuild_navy
+        icon = GFX_goal_generic_navy
+        x = 0
+        y = 0
+        cost = 7
+        completion_reward = {
+            add_political_power = 80
+            add_ideas = FRA_royal_navy_reforms
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                category = sailing_navy
+            }
+        }
+    }
+
+    focus = {
+        id = FRA_secret_subsidies
+        icon = GFX_goal_generic_finance_reform
+        prerequisite = { focus = FRA_rebuild_navy }
+        x = -1
+        y = 1
+        cost = 8
+        completion_reward = {
+            add_political_power = -50
+            USA = {
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment_0
+                    amount = 1500
+                    producer = FRA
+                }
+                add_political_power = 50
+                add_opinion_modifier = {
+                    target = FRA
+                    modifier = FRA_secret_aid
+                }
+            }
+            country_event = { id = american_revolution.26 days = 2 }
+        }
+    }
+
+    focus = {
+        id = FRA_treaty_of_alliance
+        icon = GFX_goal_generic_diplomacy
+        prerequisite = { focus = FRA_secret_subsidies }
+        x = -1
+        y = 2
+        cost = 10
+        available = {
+            USA = { has_war_with = GBR }
+        }
+        completion_reward = {
+            add_political_power = 80
+            add_ideas = FRA_reform_committees
+            country_event = { id = american_revolution.20 days = 2 }
+        }
+    }
+
+    focus = {
+        id = FRA_army_reforms
+        icon = GFX_goal_generic_army_artillery
+        prerequisite = { focus = FRA_rebuild_navy }
+        x = 1
+        y = 1
+        cost = 9
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.75
+                uses = 1
+                category = professional_army
+            }
+            add_army_experience = 20
+            add_ideas = FRA_volunteer_corps
+        }
+    }
+
+    focus = {
+        id = FRA_reform_supply
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = FRA_army_reforms }
+        x = 2
+        y = 2
+        cost = 10
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                category = supply_chain
+            }
+            add_stability = 0.04
+            country_event = { id = american_revolution.27 days = 3 }
+        }
+    }
+
+    focus = {
+        id = FRA_colonial_coordination
+        icon = GFX_goal_generic_allies
+        prerequisite = { focus = FRA_reform_supply }
+        x = 2
+        y = 3
+        cost = 10
+        completion_reward = {
+            add_research_slot = 1
+            unlock_decision = FRA_support_colonial_cause
+            country_event = { id = american_revolution.21 days = 4 }
+        }
+    }
+
+    focus = {
+        id = FRA_spanish_courtship
+        icon = GFX_goal_generic_diplomacy
+        prerequisite = { focus = FRA_treaty_of_alliance }
+        x = -2
+        y = 3
+        cost = 9
+        completion_reward = {
+            ESP = {
+                add_opinion_modifier = {
+                    target = FRA
+                    modifier = FRA_spanish_coordination
+                }
+            }
+            add_political_power = 60
+        }
+    }
+
+    focus = {
+        id = FRA_caribbean_campaign
+        icon = GFX_goal_generic_navy_battleship
+        prerequisite = { focus = FRA_colonial_coordination }
+        x = 3
+        y = 4
+        cost = 10
+        completion_reward = {
+            add_navy_experience = 25
+            add_war_support = 0.05
+            country_event = { id = american_revolution.22 days = 3 }
+        }
+    }
+
+    focus = {
+        id = FRA_financial_reforms
+        icon = GFX_goal_generic_political_reform
+        prerequisite = { focus = FRA_treaty_of_alliance }
+        x = -1
+        y = 3
+        cost = 9
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 90
+            add_ideas = FRA_reform_committees
+        }
+    }
+
+    focus = {
+        id = FRA_siege_masters
+        icon = GFX_goal_generic_military_plan
+        prerequisite = { focus = FRA_army_reforms }
+        x = 1
+        y = 2
+        cost = 10
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.75
+                uses = 1
+                category = field_artillery
+            }
+            add_army_experience = 20
+        }
+    }
+
+    focus = {
+        id = FRA_expeditionary_corps
+        icon = GFX_goal_generic_military_sphere2
+        prerequisite = {
+            focus = FRA_siege_masters
+            focus = FRA_treaty_of_alliance
+        }
+        x = 0
+        y = 4
+        cost = 11
+        completion_reward = {
+            add_manpower = 12000
+            add_army_experience = 30
+            unlock_decision = FRA_prepare_expeditionary_force
+            country_event = { id = american_revolution.23 days = 2 }
+        }
+    }
+
+    focus = {
+        id = FRA_retake_newfoundland
+        icon = GFX_goal_generic_break_the_wall
+        prerequisite = { focus = FRA_caribbean_campaign }
+        x = 3
+        y = 5
+        cost = 10
+        completion_reward = {
+            add_navy_experience = 20
+            add_political_power = 60
+            add_war_support = 0.05
+        }
+    }
+
+    focus = {
+        id = FRA_enlightenment_circles
+        icon = GFX_goal_support_democracy
+        prerequisite = { focus = FRA_financial_reforms }
+        x = -1
+        y = 4
+        cost = 10
+        completion_reward = {
+            add_research_slot = 1
+            add_ideas = FRA_enlightenment_salons
+            country_event = { id = american_revolution.24 days = 5 }
+        }
+    }
+
+    focus = {
+        id = FRA_war_of_vengeance
+        icon = GFX_goal_generic_major_war
+        prerequisite = {
+            focus = FRA_retake_newfoundland
+            focus = FRA_expeditionary_corps
+        }
+        x = 2
+        y = 5
+        cost = 12
+        completion_reward = {
+            add_war_support = 0.1
+            add_navy_experience = 30
+            GBR = {
+                add_opinion_modifier = {
+                    target = FRA
+                    modifier = FRA_war_of_vengeance
+                }
+            }
+            country_event = { id = american_revolution.28 days = 4 }
+        }
+    }
+
+    focus = {
+        id = FRA_guard_the_revolution
+        icon = GFX_goal_generic_national_unity
+        prerequisite = {
+            focus = FRA_enlightenment_circles
+            focus = FRA_war_of_vengeance
+        }
+        x = 0
+        y = 6
+        cost = 12
+        completion_reward = {
+            add_stability = 0.05
+            add_war_support = 0.05
+            add_political_power = 150
+            country_event = { id = american_revolution.25 days = 6 }
+        }
+    }
+}

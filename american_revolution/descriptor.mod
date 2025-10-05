@@ -1,0 +1,6 @@
+name="Liberty or Death"
+version="1.14"
+supported_version="1.14.*"
+replace_path="common/ideologies"
+replace_path="common/technologies"
+replace_path="common/technology_tags"

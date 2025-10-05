@@ -1,0 +1,26 @@
+bookmarks = {
+    american_revolution = {
+        name = "The American Revolution"
+        desc = "Fight for independence or defend the empire during the tumultuous years of 1775-1783."
+        date = "1775.4.19"
+        picture = "GFX_select_date_ww2"
+
+        default_country = USA
+
+        selectable = {
+            USA = {
+                history = "Play as the Continental Congress forging a new republic."
+            }
+            GBR = {
+                history = "Command the British Empire and suppress the colonial uprising."
+            }
+            FRA = {
+                history = "Intervene in the conflict to humble Britain and advance French interests."
+            }
+        }
+
+        countries = {
+            USA GBR FRA
+        }
+    }
+}

@@ -1,0 +1,28 @@
+ideologies = {
+    liberty = {
+        types = {
+            liberty = {
+                can_be_country_leader = yes
+                rules = { }
+            }
+        }
+    }
+    monarchy = {
+        types = {
+            monarchy = {
+                can_be_country_leader = yes
+                rules = { }
+            }
+        }
+    }
+    neutrality = {
+        types = {
+            neutrality = {
+                can_be_country_leader = no
+                rules = {
+                    can_declare_war_without_wargoal = no
+                }
+            }
+        }
+    }
+}

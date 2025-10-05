@@ -1,0 +1,9 @@
+division_names = {
+    FRA = {
+        infantry = {
+            "1er Régiment"
+            "2e Régiment"
+            "3e Régiment"
+        }
+    }
+}
